@@ -6,42 +6,55 @@
   <title>Nazneen Jamadar | Customer Success Engineer Portfolio</title>
   <meta
     name="description"
-    content="Portfolio of Nazneen Jamadar, Customer Success Engineer focused on SaaS onboarding, CDN, DNS, WAF, support, retention, and technical customer growth."
+    content="Portfolio of Nazneen Jamadar, Customer Success Engineer focused on SaaS onboarding, CDN, DNS, WAF, technical onboarding, support, retention, and customer growth."
   />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
     :root {
-      --bg: #fffdeb;
+      --bg: #f4f6fa;
+      --bg-soft: #eef2f7;
       --surface: #ffffff;
-      --surface-soft: rgba(255, 255, 255, 0.75);
-      --text: #1d2433;
-      --muted: #5f6676;
-      --line: rgba(29, 36, 51, 0.08);
-      --blue: #7daacb;
-      --beige: #e8dbb3;
-      --red: #ce2626;
-      --red-dark: #a91e1e;
-      --shadow: 0 20px 60px rgba(39, 48, 68, 0.10);
-      --radius-xl: 28px;
-      --radius-lg: 22px;
-      --radius-md: 16px;
+      --surface-2: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --muted-2: #64748b;
+      --line: #e2e8f0;
+      --line-strong: #cbd5e1;
+      --accent: #b42318;
+      --accent-dark: #8f1d15;
+      --accent-soft: rgba(180, 35, 24, 0.08);
+      --navy: #13233a;
+      --shadow-sm: 0 8px 24px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 18px 48px rgba(15, 23, 42, 0.08);
+      --radius-sm: 14px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
       --max: 1180px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(125, 170, 203, 0.25), transparent 30%),
-        radial-gradient(circle at top right, rgba(232, 219, 179, 0.55), transparent 28%),
-        linear-gradient(180deg, #fffef6 0%, #fffdeb 38%, #fff8df 100%);
-      min-height: 100vh;
+        radial-gradient(circle at top left, rgba(19, 35, 58, 0.05), transparent 28%),
+        radial-gradient(circle at top right, rgba(180, 35, 24, 0.06), transparent 24%),
+        linear-gradient(180deg, #f8fafc 0%, #f4f6fa 40%, #eef2f7 100%);
     }
 
     a {
@@ -50,8 +63,8 @@
     }
 
     img {
-      max-width: 100%;
       display: block;
+      max-width: 100%;
     }
 
     .container {
@@ -62,79 +75,80 @@
     .topbar-wrap {
       position: sticky;
       top: 0;
-      z-index: 50;
-      padding-top: 14px;
+      z-index: 100;
+      padding: 18px 0;
+      background: linear-gradient(to bottom, rgba(244, 246, 250, 0.92), rgba(244, 246, 250, 0.55), transparent);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
 
     .topbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 16px;
       padding: 14px 18px;
-      background: rgba(255, 255, 255, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(226, 232, 240, 0.9);
       border-radius: 999px;
-      box-shadow: 0 10px 30px rgba(35, 42, 58, 0.08);
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--shadow-sm);
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       min-width: 0;
     }
 
     .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--red), #ef6a59 58%, var(--beige));
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #d92d20 0%, #b42318 55%, #13233a 100%);
       position: relative;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
       flex: 0 0 auto;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
     }
 
     .brand-mark::before,
     .brand-mark::after {
       content: "";
       position: absolute;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.8);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
     }
 
     .brand-mark::before {
       width: 16px;
       height: 16px;
-      top: 8px;
-      left: 8px;
+      top: 9px;
+      left: 9px;
     }
 
     .brand-mark::after {
-      width: 9px;
-      height: 9px;
-      bottom: 8px;
-      right: 8px;
+      width: 8px;
+      height: 8px;
+      right: 9px;
+      bottom: 9px;
     }
 
-    .brand-text {
+    .brand-copy {
       min-width: 0;
     }
 
     .eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--red);
+      font-size: 0.74rem;
       font-weight: 700;
-      margin-bottom: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-bottom: 4px;
     }
 
     .brand-title {
       font-weight: 800;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -142,116 +156,117 @@
 
     .nav {
       display: flex;
-      align-items: center;
-      gap: 8px;
       flex-wrap: wrap;
+      gap: 8px;
       justify-content: flex-end;
     }
 
     .nav a {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--muted);
       padding: 10px 14px;
       border-radius: 999px;
-      font-size: 0.92rem;
-      color: var(--muted);
-      transition: 0.25s ease;
+      transition: 0.22s ease;
     }
 
     .nav a:hover,
     .nav a:focus-visible {
-      background: rgba(125, 170, 203, 0.16);
-      color: var(--text);
+      background: var(--bg-soft);
+      color: var(--navy);
       outline: none;
     }
 
     .hero {
-      padding: 44px 0 34px;
+      padding: 36px 0 32px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      gap: 24px;
       align-items: stretch;
     }
 
-    .hero-card,
-    .spotlight-card,
-    .panel,
-    .metric-card,
-    .story-card,
-    .quote-card,
+    .hero-main,
+    .hero-side,
+    .section-card,
+    .stat-card,
+    .profile-card,
     .timeline-card,
-    .skills-card,
+    .case-card,
+    .quote-card,
     .contact-card,
-    .mini-card {
-      background: var(--surface-soft);
-      border: 1px solid rgba(255, 255, 255, 0.85);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+    .skill-card {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      box-shadow: var(--shadow-md);
     }
 
-    .hero-card {
+    .hero-main {
       border-radius: 32px;
-      padding: 34px;
+      padding: 40px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.93)),
+        linear-gradient(135deg, rgba(180, 35, 24, 0.04), rgba(19, 35, 58, 0.03));
       position: relative;
       overflow: hidden;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,255,255,0.88)),
-        linear-gradient(135deg, rgba(125,170,203,0.18), rgba(232,219,179,0.18));
     }
 
-    .hero-card::after {
+    .hero-main::after {
       content: "";
       position: absolute;
-      inset: auto -80px -80px auto;
-      width: 240px;
-      height: 240px;
-      background: radial-gradient(circle, rgba(125,170,203,0.26), transparent 65%);
+      right: -80px;
+      bottom: -100px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(180, 35, 24, 0.08), transparent 65%);
       pointer-events: none;
     }
 
-    .kicker {
+    .hero-badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(206, 38, 38, 0.08);
-      color: var(--red-dark);
+      background: var(--accent-soft);
+      color: var(--accent-dark);
       font-weight: 700;
-      font-size: 0.86rem;
-      margin-bottom: 20px;
+      font-size: 0.88rem;
+      margin-bottom: 22px;
     }
 
-    .dot {
-      width: 8px;
-      height: 8px;
+    .hero-badge .dot {
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
-      background: var(--red);
-      box-shadow: 0 0 0 6px rgba(206, 38, 38, 0.12);
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(180, 35, 24, 0.14);
     }
 
     h1, h2, h3, h4 {
       margin: 0;
-      line-height: 1.05;
+      line-height: 1.08;
       letter-spacing: -0.03em;
     }
 
     h1 {
-      font-family: "Manrope", "Inter", sans-serif;
-      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-family: "Sora", "Inter", sans-serif;
+      font-size: clamp(2.8rem, 4.8vw, 4.7rem);
       font-weight: 800;
       max-width: 11ch;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
+      color: var(--navy);
     }
 
     .hero-subtitle {
-      font-size: clamp(1.08rem, 1.8vw, 1.28rem);
-      line-height: 1.72;
+      max-width: 62ch;
+      font-size: 1.08rem;
+      line-height: 1.78;
       color: var(--muted);
-      max-width: 61ch;
-      margin-bottom: 24px;
+      margin: 0 0 28px;
     }
 
     .hero-subtitle strong {
@@ -262,44 +277,45 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
       min-height: 48px;
       padding: 12px 18px;
       border-radius: 999px;
-      border: 1px solid transparent;
       font-weight: 700;
-      transition: 0.25s ease;
+      font-size: 0.95rem;
+      transition: 0.22s ease;
+      border: 1px solid transparent;
     }
 
     .btn-primary {
-      background: var(--red);
+      background: var(--accent);
       color: #fff;
-      box-shadow: 0 16px 30px rgba(206, 38, 38, 0.18);
+      box-shadow: 0 14px 30px rgba(180, 35, 24, 0.18);
     }
 
     .btn-primary:hover,
     .btn-primary:focus-visible {
-      background: var(--red-dark);
+      background: var(--accent-dark);
       transform: translateY(-1px);
       outline: none;
     }
 
     .btn-secondary {
-      background: rgba(125, 170, 203, 0.12);
-      color: var(--text);
-      border-color: rgba(125, 170, 203, 0.3);
+      background: #fff;
+      color: var(--navy);
+      border-color: var(--line-strong);
     }
 
     .btn-secondary:hover,
     .btn-secondary:focus-visible {
-      background: rgba(125, 170, 203, 0.2);
+      border-color: var(--navy);
+      background: #f8fafc;
       outline: none;
     }
 
@@ -312,146 +328,186 @@
     .chip {
       padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.78);
+      background: var(--surface-2);
       border: 1px solid var(--line);
-      color: var(--text);
-      font-size: 0.92rem;
+      color: var(--navy);
+      font-size: 0.9rem;
       font-weight: 600;
     }
 
-    .spotlight-card {
+    .hero-side {
       border-radius: 32px;
-      padding: 22px;
+      padding: 20px;
       display: grid;
-      gap: 18px;
+      gap: 14px;
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.88)),
-        linear-gradient(135deg, rgba(232,219,179,0.3), rgba(125,170,203,0.18));
+        linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.92)),
+        linear-gradient(135deg, rgba(19, 35, 58, 0.03), rgba(180, 35, 24, 0.03));
     }
 
-    .profile-tile {
-      border-radius: 26px;
-      padding: 22px;
-      background: linear-gradient(135deg, rgba(232,219,179,0.55), rgba(255,255,255,0.9));
-      border: 1px solid rgba(29, 36, 51, 0.08);
+    .profile-card {
+      border-radius: 24px;
+      padding: 24px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
       position: relative;
       overflow: hidden;
-      min-height: 240px;
     }
 
-    .profile-tile::before {
+    .profile-card::before {
       content: "";
       position: absolute;
-      right: -20px;
-      top: -20px;
-      width: 120px;
-      height: 120px;
+      top: -40px;
+      right: -40px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
-      background: rgba(206, 38, 38, 0.08);
+      background: radial-gradient(circle, rgba(19, 35, 58, 0.08), transparent 70%);
     }
 
-    .profile-avatar {
-      width: 78px;
-      height: 78px;
-      border-radius: 24px;
-      background: linear-gradient(135deg, var(--blue), #a9c5dc);
+    .avatar {
+      width: 82px;
+      height: 82px;
+      border-radius: 22px;
       display: grid;
       place-items: center;
-      font-size: 1.6rem;
       font-weight: 800;
-      color: white;
+      font-size: 1.65rem;
+      color: #fff;
+      background: linear-gradient(135deg, #13233a 0%, #223c62 45%, #b42318 100%);
+      box-shadow: 0 16px 28px rgba(19, 35, 58, 0.18);
       margin-bottom: 18px;
-      box-shadow: 0 14px 24px rgba(125, 170, 203, 0.25);
     }
 
     .profile-name {
-      font-size: 1.38rem;
+      font-size: 1.4rem;
       font-weight: 800;
       margin-bottom: 6px;
+      color: var(--navy);
     }
 
     .profile-role {
+      font-size: 0.98rem;
       color: var(--muted);
-      font-weight: 600;
-      margin-bottom: 18px;
-      line-height: 1.5;
+      line-height: 1.65;
+      margin-bottom: 16px;
     }
 
     .profile-note {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
       padding: 10px 12px;
       border-radius: 14px;
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(29,36,51,0.08);
-      font-size: 0.92rem;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      font-size: 0.9rem;
       font-weight: 600;
+      color: var(--text);
+      line-height: 1.5;
     }
 
-    .spotlight-grid {
+    .stats-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
     }
 
-    .mini-card {
+    .stat-card {
       border-radius: 22px;
-      padding: 18px;
-      background: rgba(255,255,255,0.82);
+      padding: 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     }
 
-    .mini-label {
-      font-size: 0.8rem;
+    .stat-label {
+      font-size: 0.76rem;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: var(--muted);
-      margin-bottom: 8px;
-      font-weight: 700;
+      color: var(--muted-2);
+      margin-bottom: 10px;
     }
 
-    .mini-value {
-      font-size: clamp(1.5rem, 2.2vw, 2rem);
+    .stat-number {
+      font-size: clamp(1.6rem, 2vw, 2rem);
       font-weight: 800;
+      color: var(--navy);
       margin-bottom: 8px;
     }
 
-    .mini-copy {
+    .stat-copy {
+      font-size: 0.94rem;
+      line-height: 1.6;
       color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.55;
     }
 
     .section {
-      padding: 26px 0;
+      padding: 28px 0;
     }
 
     .section-header {
       display: flex;
       align-items: end;
       justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 22px;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-family: "Sora", "Inter", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.9rem);
+      font-weight: 800;
+      color: var(--navy);
+      margin-top: 6px;
     }
 
     .section-copy {
       max-width: 60ch;
       color: var(--muted);
-      line-height: 1.72;
-      font-size: 1.02rem;
+      font-size: 1rem;
+      line-height: 1.78;
+      margin: 0;
     }
 
-    .section-title {
-      font-family: "Manrope", "Inter", sans-serif;
-      font-size: clamp(2rem, 3vw, 3rem);
-      font-weight: 800;
-      margin-bottom: 10px;
+    .section-card {
+      border-radius: 28px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.9);
     }
 
-    .panel {
-      border-radius: var(--radius-xl);
-      padding: 28px;
-      background: rgba(255,255,255,0.8);
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+    }
+
+    .list {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .list li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      margin-top: 9px;
+      background: linear-gradient(135deg, #d92d20, #b42318);
+      box-shadow: 0 0 0 5px rgba(180, 35, 24, 0.1);
+    }
+
+    .list strong {
+      color: var(--text);
     }
 
     .metrics-grid {
@@ -462,96 +518,53 @@
 
     .metric-card {
       border-radius: 24px;
-      padding: 22px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.86));
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      box-shadow: var(--shadow-sm);
     }
 
     .metric-number {
-      font-size: clamp(2rem, 2.7vw, 2.7rem);
+      font-size: clamp(2rem, 2.8vw, 2.7rem);
       font-weight: 800;
+      color: var(--navy);
       margin-bottom: 8px;
-      color: var(--text);
     }
 
     .metric-title {
+      font-size: 1rem;
       font-weight: 700;
       margin-bottom: 8px;
-      font-size: 1rem;
     }
 
     .metric-body {
-      font-size: 0.96rem;
-      line-height: 1.6;
-      color: var(--muted);
-    }
-
-    .story-layout {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 18px;
-    }
-
-    .story-card,
-    .timeline-card,
-    .quote-card,
-    .skills-card,
-    .contact-card {
-      border-radius: var(--radius-xl);
-      padding: 26px;
-      background: rgba(255,255,255,0.84);
-    }
-
-    .story-card h3,
-    .timeline-card h3,
-    .quote-card h3,
-    .skills-card h3,
-    .contact-card h3 {
-      font-size: 1.35rem;
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-
-    .lead-list,
-    .case-points,
-    .skill-list,
-    .contact-list {
-      display: grid;
-      gap: 12px;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    .lead-list li,
-    .case-points li,
-    .skill-list li,
-    .contact-list li {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
+      font-size: 0.95rem;
       color: var(--muted);
       line-height: 1.65;
     }
 
-    .lead-list li::before,
-    .case-points li::before,
-    .skill-list li::before,
-    .contact-list li::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      margin-top: 9px;
-      flex: 0 0 auto;
-      background: linear-gradient(135deg, var(--red), #f08d7b);
-      box-shadow: 0 0 0 5px rgba(206, 38, 38, 0.10);
+    .work-grid,
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 18px;
     }
 
-    .lead-list strong,
-    .case-points strong,
-    .skill-list strong,
-    .contact-list strong {
-      color: var(--text);
+    .case-card,
+    .timeline-card,
+    .quote-card,
+    .contact-card,
+    .skill-card {
+      border-radius: 28px;
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .card-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 16px;
     }
 
     .case-grid {
@@ -563,17 +576,17 @@
 
     .case-box {
       padding: 18px;
-      border-radius: 20px;
-      background: linear-gradient(180deg, rgba(125,170,203,0.09), rgba(255,255,255,0.78));
-      border: 1px solid rgba(125,170,203,0.18);
+      border-radius: 18px;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
     }
 
     .case-box .label {
       font-size: 0.76rem;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: var(--muted);
-      font-weight: 700;
+      color: var(--muted-2);
       margin-bottom: 8px;
     }
 
@@ -581,7 +594,7 @@
       margin: 0;
       color: var(--muted);
       line-height: 1.65;
-      font-size: 0.96rem;
+      font-size: 0.95rem;
     }
 
     .case-box strong {
@@ -595,8 +608,8 @@
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 74px 1fr;
-      gap: 16px;
+      grid-template-columns: 72px 1fr;
+      gap: 14px;
       align-items: start;
     }
 
@@ -604,34 +617,56 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 40px;
-      padding: 10px 12px;
+      min-height: 42px;
       border-radius: 999px;
-      background: rgba(232, 219, 179, 0.55);
-      color: var(--text);
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      color: var(--navy);
       font-weight: 800;
-      font-size: 0.88rem;
-      border: 1px solid rgba(29,36,51,0.08);
+      font-size: 0.9rem;
+      padding: 10px 12px;
     }
 
     .timeline-content {
-      padding: 14px 16px;
+      padding: 15px 16px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.76);
-      border: 1px solid rgba(29,36,51,0.06);
+      background: #fff;
+      border: 1px solid var(--line);
     }
 
     .timeline-content strong {
       display: block;
       margin-bottom: 6px;
-      font-size: 1rem;
+      color: var(--text);
+      font-size: 0.98rem;
     }
 
     .timeline-content p {
       margin: 0;
       color: var(--muted);
       line-height: 1.62;
-      font-size: 0.95rem;
+      font-size: 0.94rem;
+    }
+
+    .quote-card {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.96)),
+        linear-gradient(135deg, rgba(180, 35, 24, 0.03), rgba(19, 35, 58, 0.03));
+    }
+
+    .quote {
+      font-size: clamp(1.18rem, 2vw, 1.45rem);
+      line-height: 1.6;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+      max-width: 34ch;
+    }
+
+    .quote-copy {
+      color: var(--muted);
+      line-height: 1.72;
+      font-size: 0.98rem;
     }
 
     .skills-grid {
@@ -640,60 +675,69 @@
       gap: 16px;
     }
 
-    .skill-block {
-      padding: 20px;
-      border-radius: 22px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.84));
-      border: 1px solid rgba(29,36,51,0.06);
-    }
-
-    .skill-block h4 {
-      font-size: 1.05rem;
+    .skill-card h4 {
+      font-size: 1.04rem;
       font-weight: 800;
       margin-bottom: 14px;
-    }
-
-    .quote-card {
-      background: linear-gradient(135deg, rgba(125,170,203,0.14), rgba(255,255,255,0.88));
-    }
-
-    .quote {
-      font-size: clamp(1.2rem, 2vw, 1.5rem);
-      line-height: 1.55;
-      font-weight: 700;
-      margin-bottom: 18px;
-      max-width: 34ch;
-    }
-
-    .quote-meta {
-      color: var(--muted);
-      font-size: 0.96rem;
-      line-height: 1.65;
-    }
-
-    .cta-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 18px;
-    }
-
-    .contact-card {
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.94), rgba(255,255,255,0.84)),
-        linear-gradient(135deg, rgba(232,219,179,0.18), rgba(125,170,203,0.16));
+      color: var(--navy);
     }
 
     .availability {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 10px 12px;
+      padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(206, 38, 38, 0.08);
-      color: var(--red-dark);
-      font-size: 0.9rem;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
       font-weight: 700;
+      font-size: 0.88rem;
       margin-bottom: 18px;
+    }
+
+    .availability .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(180, 35, 24, 0.14);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .contact-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .contact-list li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex: 0 0 auto;
+      margin-top: 9px;
+      background: linear-gradient(135deg, #d92d20, #b42318);
+      box-shadow: 0 0 0 5px rgba(180, 35, 24, 0.1);
+    }
+
+    .contact-list strong {
+      color: var(--text);
+    }
+
+    .contact-list a {
+      color: var(--navy);
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     .contact-actions {
@@ -704,35 +748,30 @@
     }
 
     .footer {
-      padding: 28px 0 46px;
+      padding: 28px 0 48px;
     }
 
     .footer-inner {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      padding-top: 8px;
-      color: var(--muted);
-      font-size: 0.95rem;
-      border-top: 1px solid rgba(29,36,51,0.08);
+      color: var(--muted-2);
+      font-size: 0.94rem;
     }
 
-    .accent {
-      color: var(--red);
+    .footer strong {
+      color: var(--navy);
     }
 
-    .soft-accent {
-      color: #4e7897;
-    }
-
-    @media (max-width: 1120px) {
+    @media (max-width: 1100px) {
       .hero-grid,
-      .story-layout,
+      .work-grid,
       .cta-grid,
-      .metrics-grid,
-      .skills-grid {
-        grid-template-columns: 1fr 1fr;
+      .two-col {
+        grid-template-columns: 1fr;
       }
 
       .metrics-grid {
@@ -748,39 +787,15 @@
       }
     }
 
-    @media (max-width: 820px) {
+    @media (max-width: 840px) {
       .topbar {
-        border-radius: 28px;
-        align-items: flex-start;
         flex-direction: column;
+        align-items: flex-start;
+        border-radius: 28px;
       }
 
       .nav {
         justify-content: flex-start;
-      }
-
-      .hero-grid,
-      .story-layout,
-      .cta-grid,
-      .metrics-grid,
-      .skills-grid,
-      .spotlight-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card,
-      .spotlight-card,
-      .panel,
-      .story-card,
-      .timeline-card,
-      .quote-card,
-      .skills-card,
-      .contact-card {
-        padding: 22px;
-      }
-
-      h1 {
-        max-width: none;
       }
 
       .section-header,
@@ -789,9 +804,26 @@
         align-items: flex-start;
       }
 
+      .stats-grid,
+      .skills-grid,
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
       .timeline-item {
         grid-template-columns: 1fr;
         gap: 10px;
+      }
+
+      .hero-main,
+      .hero-side,
+      .section-card,
+      .case-card,
+      .timeline-card,
+      .quote-card,
+      .contact-card,
+      .skill-card {
+        padding: 22px;
       }
     }
 
@@ -801,34 +833,11 @@
       }
 
       .topbar-wrap {
-        padding-top: 10px;
-      }
-
-      .topbar {
-        padding: 12px;
+        padding: 12px 0;
       }
 
       .hero {
-        padding-top: 22px;
-      }
-
-      .hero-card,
-      .spotlight-card,
-      .panel,
-      .story-card,
-      .timeline-card,
-      .quote-card,
-      .skills-card,
-      .contact-card {
-        border-radius: 24px;
-        padding: 18px;
-      }
-
-      .nav a,
-      .btn,
-      .chip {
-        width: 100%;
-        justify-content: center;
+        padding-top: 18px;
       }
 
       .hero-actions,
@@ -836,78 +845,111 @@
         display: grid;
         grid-template-columns: 1fr;
       }
+
+      .btn {
+        width: 100%;
+      }
+
+      .nav a {
+        width: 100%;
+        text-align: center;
+      }
+
+      .chip-row {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container topbar-wrap">
-    <header class="topbar">
-      <div class="brand">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div class="brand-text">
-          <div class="eyebrow">Portfolio</div>
-          <div class="brand-title">Nazneen Jamadar</div>
+  <div class="topbar-wrap">
+    <div class="container">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div class="brand-copy">
+            <div class="eyebrow">Portfolio</div>
+            <div class="brand-title">Nazneen Jamadar</div>
+          </div>
         </div>
-      </div>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#impact">Impact</a>
-        <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#impact">Impact</a>
+          <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+    </div>
   </div>
 
   <main>
     <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-card">
-          <div class="kicker"><span class="dot"></span>Customer Success Engineer with a strong technical edge</div>
+        <section class="hero-main">
+          <div class="hero-badge">
+            <span class="dot"></span>
+            Customer Success Engineer with strong technical ownership
+          </div>
+
           <h1>I turn product complexity into customer confidence.</h1>
+
           <p class="hero-subtitle">
-            I work at the intersection of <strong>customer success, pre-sales, onboarding, and technical problem solving</strong>. From first product conversation to production go-live, I help SaaS and infrastructure customers adopt faster, resolve issues earlier, and see value sooner.
+            I work at the intersection of <strong>customer success, pre-sales, onboarding, and technical problem solving</strong>.
+            From the first product conversation to production go-live, I help SaaS and infrastructure customers adopt faster,
+            resolve issues earlier, and realize value sooner.
           </p>
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">Let’s connect</a>
             <a class="btn btn-secondary" href="#work">See selected work</a>
           </div>
+
           <div class="chip-row">
             <span class="chip">SaaS Customer Success</span>
             <span class="chip">CDN, DNS & WAF</span>
             <span class="chip">PoC to Production</span>
             <span class="chip">Onboarding & Retention</span>
           </div>
-        </div>
+        </section>
 
-        <aside class="spotlight-card" aria-label="Profile highlights">
-          <div class="profile-tile">
-            <div class="profile-avatar">NJ</div>
+        <aside class="hero-side" aria-label="Profile highlights">
+          <div class="profile-card">
+            <div class="avatar">NJ</div>
             <div class="profile-name">Nazneen Jamadar</div>
-            <div class="profile-role">Customer Success Engineer focused on technical onboarding, support excellence, and long-term account growth.</div>
-            <div class="profile-note">Trusted to lead high-touch customer journeys with clarity and calm execution.</div>
+            <div class="profile-role">
+              Customer Success Engineer focused on technical onboarding, support excellence, and long-term account growth.
+            </div>
+            <div class="profile-note">
+              Trusted to lead high-touch customer journeys with structure, clarity, and calm execution.
+            </div>
           </div>
 
-          <div class="spotlight-grid">
-            <div class="mini-card">
-              <div class="mini-label">PoC conversion</div>
-              <div class="mini-value">60%</div>
-              <div class="mini-copy">Supported 10 PoCs and converted 6 into active production customers.</div>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-label">PoC conversion</div>
+              <div class="stat-number">60%</div>
+              <div class="stat-copy">Supported 10 PoCs and converted 6 into active production customers.</div>
             </div>
-            <div class="mini-card">
-              <div class="mini-label">Onboarding speed</div>
-              <div class="mini-value">35%</div>
-              <div class="mini-copy">Reduced time-to-go-live by simplifying technical onboarding and documentation.</div>
+
+            <div class="stat-card">
+              <div class="stat-label">Onboarding speed</div>
+              <div class="stat-number">35%</div>
+              <div class="stat-copy">Reduced time-to-go-live by simplifying technical onboarding and documentation.</div>
             </div>
-            <div class="mini-card">
-              <div class="mini-label">Support quality</div>
-              <div class="mini-value">92%</div>
-              <div class="mini-copy">Improved customer confidence through faster follow-ups and structured issue handling.</div>
+
+            <div class="stat-card">
+              <div class="stat-label">Support quality</div>
+              <div class="stat-number">92%</div>
+              <div class="stat-copy">Improved customer confidence through faster follow-ups and structured issue handling.</div>
             </div>
-            <div class="mini-card">
-              <div class="mini-label">Enablement</div>
-              <div class="mini-value">20+</div>
-              <div class="mini-copy">Knowledge assets, walkthroughs, and training sessions created to improve adoption at scale.</div>
+
+            <div class="stat-card">
+              <div class="stat-label">Enablement</div>
+              <div class="stat-number">20+</div>
+              <div class="stat-copy">Created training assets, notes, and walkthroughs to improve adoption at scale.</div>
             </div>
           </div>
         </aside>
@@ -922,17 +964,32 @@
             <h2 class="section-title">Built for roles where empathy alone is not enough.</h2>
           </div>
           <p class="section-copy">
-            My work is strongest in environments where customers need both relationship management and real technical guidance. I am comfortable handling product demos, PoC execution, onboarding workflows, DNS and CDN setup, WAF coordination, issue resolution, stakeholder communication, and ongoing customer adoption.
+            My best work happens in environments where customers need both relationship management and real technical guidance.
+            I am comfortable handling product demos, PoC execution, onboarding workflows, DNS and CDN setup, WAF coordination,
+            issue resolution, stakeholder communication, and ongoing customer adoption.
           </p>
         </div>
 
-        <div class="panel">
-          <ul class="lead-list">
-            <li><span><strong>I bridge technical and non-technical teams.</strong> I translate platform capability into outcomes customers can understand, adopt, and trust.</span></li>
-            <li><span><strong>I stay involved beyond the handoff.</strong> I do not disappear after demo calls. I help drive onboarding, activation, support continuity, and expansion readiness.</span></li>
-            <li><span><strong>I thrive in fast-moving startup environments.</strong> I am comfortable switching between customer calls, troubleshooting, documentation, internal coordination, and follow-up execution in the same day.</span></li>
-            <li><span><strong>I care about momentum.</strong> My focus is reducing friction, shortening evaluation cycles, and helping customers move from uncertainty to confident usage.</span></li>
-          </ul>
+        <div class="section-card two-col">
+          <div>
+            <h3 class="card-title">What I bring</h3>
+            <ul class="list">
+              <li><span><strong>I bridge technical and non-technical teams.</strong> I translate platform capability into outcomes customers can understand, adopt, and trust.</span></li>
+              <li><span><strong>I stay involved beyond the handoff.</strong> I support onboarding, activation, support continuity, and expansion readiness.</span></li>
+              <li><span><strong>I thrive in fast-moving environments.</strong> I can shift across customer calls, troubleshooting, documentation, coordination, and follow-up execution in the same day.</span></li>
+              <li><span><strong>I care about momentum.</strong> My focus is reducing friction, shortening evaluation cycles, and helping customers move from uncertainty to confident usage.</span></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="card-title">Operating style</h3>
+            <ul class="list">
+              <li><span><strong>Structured communication:</strong> customers stay informed, internal teams stay aligned, and blockers are surfaced early.</span></li>
+              <li><span><strong>Technical ownership:</strong> I do not stop at surface-level updates. I stay close to the actual configuration and rollout path.</span></li>
+              <li><span><strong>Customer calm:</strong> I keep conversations clear and composed, especially when timelines are tight or systems are under pressure.</span></li>
+              <li><span><strong>Adoption mindset:</strong> success is not only go-live. It is stable usage, trust, retention, and long-term account value.</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -945,7 +1002,8 @@
             <h2 class="section-title">The numbers recruiters look for first.</h2>
           </div>
           <p class="section-copy">
-            This portfolio is designed to quickly show execution strength across success, implementation, support, and account growth, the areas that matter most in customer-facing technical roles.
+            This section is intentionally designed for fast scanning. It surfaces execution strength across success,
+            implementation, support, and account growth, the areas that matter most in customer-facing technical roles.
           </p>
         </div>
 
@@ -953,38 +1011,50 @@
           <article class="metric-card">
             <div class="metric-number">10+</div>
             <div class="metric-title">PoCs managed</div>
-            <div class="metric-body">Handled evaluation journeys from technical setup to real-time troubleshooting and stakeholder confidence building.</div>
+            <div class="metric-body">
+              Handled evaluation journeys from technical setup to real-time troubleshooting and stakeholder confidence building.
+            </div>
           </article>
+
           <article class="metric-card">
             <div class="metric-number">6</div>
             <div class="metric-title">PoCs converted</div>
-            <div class="metric-body">Turned successful trials into production deployments through hands-on support, clear communication, and faster resolution.</div>
+            <div class="metric-body">
+              Turned successful trials into production deployments through hands-on support, faster resolution, and stronger customer trust.
+            </div>
           </article>
+
           <article class="metric-card">
             <div class="metric-number">30+</div>
             <div class="metric-title">Customer workflows supported</div>
-            <div class="metric-body">Contributed across demos, onboarding, go-live coordination, documentation, support, and recurring customer reviews.</div>
+            <div class="metric-body">
+              Contributed across demos, onboarding, go-live coordination, documentation, support, and recurring customer reviews.
+            </div>
           </article>
+
           <article class="metric-card">
             <div class="metric-number">20+</div>
             <div class="metric-title">Enablement assets created</div>
-            <div class="metric-body">Built knowledge base content, internal notes, and training resources that reduced repeated support dependence.</div>
+            <div class="metric-body">
+              Built knowledge-base content, internal notes, and training resources that reduced repeated support dependence.
+            </div>
           </article>
         </div>
       </div>
     </section>
 
     <section class="section" id="work">
-      <div class="container story-layout">
-        <div class="story-card">
+      <div class="container work-grid">
+        <div class="case-card">
           <div class="eyebrow">Selected work</div>
-          <h3>What I actually do across the customer journey</h3>
-          <ul class="case-points">
-            <li><span><strong>Pre-sales support and demos:</strong> Help prospects understand product fit, use cases, and technical feasibility before a trial begins.</span></li>
-            <li><span><strong>PoC execution:</strong> Set up test environments, coordinate technical validation, and stay closely involved during evaluation.</span></li>
-            <li><span><strong>Onboarding and implementation:</strong> Support DNS, CDN, and WAF configuration to reduce go-live friction and improve early product adoption.</span></li>
-            <li><span><strong>L2 issue handling:</strong> Troubleshoot customer-side and platform-side issues with urgency, structure, and regular updates.</span></li>
-            <li><span><strong>Retention and growth:</strong> Stay engaged post go-live through health checks, QBR-style conversations, training, and expansion signals.</span></li>
+          <h3 class="card-title">What I actually do across the customer journey</h3>
+
+          <ul class="list">
+            <li><span><strong>Pre-sales support and demos:</strong> help prospects understand product fit, use cases, and technical feasibility before a trial begins.</span></li>
+            <li><span><strong>PoC execution:</strong> set up test environments, coordinate technical validation, and stay closely involved during evaluation.</span></li>
+            <li><span><strong>Onboarding and implementation:</strong> support DNS, CDN, and WAF configuration to reduce go-live friction and improve early product adoption.</span></li>
+            <li><span><strong>L2 issue handling:</strong> troubleshoot customer-side and platform-side issues with urgency, structure, and regular updates.</span></li>
+            <li><span><strong>Retention and growth:</strong> stay engaged post go-live through health checks, training, and expansion signals.</span></li>
           </ul>
 
           <div class="case-grid">
@@ -992,35 +1062,40 @@
               <div class="label">Challenge</div>
               <p><strong>Customer hesitation during evaluation</strong><br>Prospects often needed more than feature explanations. They needed confidence that the platform would work in their environment.</p>
             </div>
+
             <div class="case-box">
               <div class="label">Approach</div>
               <p><strong>High-touch technical guidance</strong><br>I stayed involved during setup, clarified blockers quickly, and made the testing journey feel structured rather than risky.</p>
             </div>
+
             <div class="case-box">
               <div class="label">Result</div>
-              <p><strong>Better conversion and trust</strong><br>Stronger PoC outcomes, faster production readiness, and better long-term customer confidence after onboarding.</p>
+              <p><strong>Better conversion and trust</strong><br>Stronger PoC outcomes, faster production readiness, and better long-term confidence after onboarding.</p>
             </div>
           </div>
         </div>
 
         <div class="timeline-card">
           <div class="eyebrow">How I work</div>
-          <h3>A practical flow from first call to long-term adoption</h3>
+          <h3 class="card-title">A practical flow from first call to long-term adoption</h3>
+
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-pill">01</div>
               <div class="timeline-content">
                 <strong>Discover</strong>
-                <p>Understand the customer’s current setup, blockers, traffic patterns, and decision criteria.</p>
+                <p>Understand the customer’s setup, blockers, traffic patterns, and decision criteria.</p>
               </div>
             </div>
+
             <div class="timeline-item">
               <div class="timeline-pill">02</div>
               <div class="timeline-content">
                 <strong>Validate</strong>
-                <p>Run demos and PoCs that connect product capability to the customer’s real use case.</p>
+                <p>Run demos and PoCs that connect product capability to the customer’s actual use case.</p>
               </div>
             </div>
+
             <div class="timeline-item">
               <div class="timeline-pill">03</div>
               <div class="timeline-content">
@@ -1028,6 +1103,7 @@
                 <p>Support onboarding, configuration, stakeholder alignment, and go-live readiness.</p>
               </div>
             </div>
+
             <div class="timeline-item">
               <div class="timeline-pill">04</div>
               <div class="timeline-content">
@@ -1035,6 +1111,7 @@
                 <p>Handle support, reduce recurring issues, and improve customer comfort with the product.</p>
               </div>
             </div>
+
             <div class="timeline-item">
               <div class="timeline-pill">05</div>
               <div class="timeline-content">
@@ -1051,19 +1128,20 @@
       <div class="container cta-grid">
         <div class="quote-card">
           <div class="eyebrow">Positioning</div>
-          <h3>The kind of teammate I aim to be</h3>
+          <h3 class="card-title">The kind of teammate I aim to be</h3>
           <div class="quote">
             “Someone customers trust during uncertainty, and someone internal teams trust when execution needs to stay sharp.”
           </div>
-          <div class="quote-meta">
-            I bring together responsiveness, technical curiosity, and customer calm. That combination matters most when products are complex, timelines are tight, and the customer experience can easily break down.
+          <div class="quote-copy">
+            I bring together responsiveness, technical curiosity, and customer calm. That combination matters most when products are complex,
+            timelines are tight, and the customer experience can easily break down.
           </div>
         </div>
 
-        <div class="story-card">
+        <div class="case-card">
           <div class="eyebrow">Case study</div>
-          <h3>Improving performance confidence during a CDN and WAF evaluation</h3>
-          <ul class="case-points">
+          <h3 class="card-title">Improving performance confidence during a CDN and WAF evaluation</h3>
+          <ul class="list">
             <li><span><strong>Situation:</strong> A prospect evaluating CDN and WAF capabilities needed assurance around performance improvement, setup complexity, and production risk.</span></li>
             <li><span><strong>Action:</strong> I led the product walkthrough, supported DNS and caching configuration, helped coordinate WAF policy setup, and stayed active during the testing period to address blockers quickly.</span></li>
             <li><span><strong>Result:</strong> The customer saw measurable improvement during the PoC, gained confidence in the migration path, and moved forward to production with stronger internal buy-in.</span></li>
@@ -1080,31 +1158,34 @@
             <h2 class="section-title">Depth where customer success meets technical ownership.</h2>
           </div>
           <p class="section-copy">
-            These are the areas where I am most valuable, especially for recruiter screens focused on onboarding, post-sales success, solution engineering overlap, or technical account management.
+            These are the areas where I am most valuable, especially for recruiter screens focused on onboarding,
+            post-sales success, solution engineering overlap, or technical account management.
           </p>
         </div>
 
         <div class="skills-grid">
-          <div class="skill-block skills-card">
+          <div class="skill-card">
             <h4>Customer Success Operations</h4>
-            <ul class="skill-list">
+            <ul class="list">
               <li><span>Customer journey management from demo through retention</span></li>
               <li><span>Stakeholder communication and follow-up rigor</span></li>
               <li><span>QBR support, health checks, and adoption tracking</span></li>
             </ul>
           </div>
-          <div class="skill-block skills-card">
+
+          <div class="skill-card">
             <h4>Technical Enablement</h4>
-            <ul class="skill-list">
-              <li><span>DNS, CDN, WAF onboarding support</span></li>
+            <ul class="list">
+              <li><span>DNS, CDN, and WAF onboarding support</span></li>
               <li><span>PoC setup, testing guidance, and go-live readiness</span></li>
               <li><span>L2 troubleshooting for web performance and security workflows</span></li>
             </ul>
           </div>
-          <div class="skill-block skills-card">
+
+          <div class="skill-card">
             <h4>Content & Scale</h4>
-            <ul class="skill-list">
-              <li><span>Knowledge base writing and process documentation</span></li>
+            <ul class="list">
+              <li><span>Knowledge-base writing and process documentation</span></li>
               <li><span>Customer training sessions and product walkthroughs</span></li>
               <li><span>Reducing repetitive queries through structured enablement</span></li>
             </ul>
@@ -1116,24 +1197,32 @@
     <section class="section" id="contact">
       <div class="container cta-grid">
         <div class="contact-card">
-          <div class="availability"><span class="dot"></span>Open to customer success, onboarding, solutions, and technical account roles</div>
-          <h3>Let’s talk about roles where customer trust and technical clarity both matter.</h3>
+          <div class="availability">
+            <span class="dot"></span>
+            Open to customer success, onboarding, solutions, and technical account roles
+          </div>
+
+          <h3 class="card-title">Let’s talk about roles where customer trust and technical clarity both matter.</h3>
+
           <ul class="contact-list">
-            <li><span><strong>Email:</strong> nazneen.connect@gmail.com</span></li>
-            <li><span><strong>LinkedIn:</strong> https://www.linkedin.com/in/nazneen-j-90b032212</span></li>
+            <li><span><strong>Email:</strong> <a href="mailto:nazneen.connect@gmail.com">nazneen.connect@gmail.com</a></span></li>
+            <li><span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nazneen-j-90b032212" target="_blank" rel="noreferrer">View profile</a></span></li>
             <li><span><strong>Location:</strong> Bengaluru, India</span></li>
           </ul>
+
           <div class="contact-actions">
-            <a class="btn btn-primary" href="mailto:yourname@email.com">Email me</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com" target="_blank" rel="noreferrer">View LinkedIn</a>
+            <a class="btn btn-primary" href="mailto:nazneen.connect@gmail.com">Email me</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/nazneen-j-90b032212" target="_blank" rel="noreferrer">View LinkedIn</a>
           </div>
         </div>
 
         <div class="quote-card">
           <div class="eyebrow">Final note</div>
-          <h3>Why this portfolio is structured this way</h3>
-          <div class="quote-meta">
-            Recruiters do not spend long on first review. This layout is intentionally built to surface value fast: who I am, what I own, what I have improved, how I work, and where I fit best. The goal is not just to look polished. The goal is to make hiring me feel obvious.
+          <h3 class="card-title">Why this portfolio is structured this way</h3>
+          <div class="quote-copy">
+            Recruiters do not spend long on a first review. This layout is intentionally built to surface value fast:
+            who I am, what I own, what I have improved, how I work, and where I fit best.
+            The goal is not just to look polished. The goal is to make hiring me feel obvious.
           </div>
         </div>
       </div>
@@ -1142,7 +1231,7 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div>© 2026 <span class="soft-accent">Nazneen Jamadar</span>. Designed for modern recruiter review.</div>
+      <div>© 2026 <strong>Nazneen Jamadar</strong>. Designed for a modern recruiter review.</div>
     </div>
   </footer>
 </body>
