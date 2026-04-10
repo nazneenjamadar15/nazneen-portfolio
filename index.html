@@ -1,4 +1,3 @@
-html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,64 +5,63 @@ html
   <title>Nazneen Jamadar | Customer Success Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Customer Success Engineer with experience in SaaS, CDN, DNS, WAF, and Web Security. Skilled in demos, PoC, onboarding, support, retention, and customer growth.">
 
-  <!-- Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background: #0b1220;
+      background: linear-gradient(135deg, #0f172a, #020617);
       color: #e2e8f0;
-      scroll-behavior: smooth;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      background: rgba(2,6,23,0.85);
-      backdrop-filter: blur(10px);
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      z-index: 1000;
-      border-bottom: 1px solid #1f2937;
-    }
-
-    nav a {
-      color: #cbd5f5;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    nav a:hover {
-      color: #38bdf8;
     }
 
     header {
       text-align: center;
-      padding: 120px 20px 80px;
-      background: radial-gradient(circle at top, #1e293b, #020617);
+      padding: 80px 20px;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+    h1 { font-size: 3rem; margin-bottom: 10px; }
+    h2 { color: #38bdf8; text-align: center; margin-top: 50px; }
 
-    .subtitle {
+    p {
       color: #94a3b8;
-      margin-bottom: 20px;
+      max-width: 800px;
+      margin: 10px auto;
+      text-align: center;
+      line-height: 1.6;
     }
 
-    .hero-text {
+    ul {
       max-width: 700px;
       margin: auto;
-      line-height: 1.7;
+      color: #94a3b8;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.03);
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.3s;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
     }
 
     .highlight {
@@ -71,196 +69,136 @@ html
       font-weight: 600;
     }
 
-    .cta {
-      margin-top: 30px;
-    }
-
-    .cta a {
-      background: #38bdf8;
-      color: #020617;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .section {
-      margin-bottom: 60px;
-    }
-
-    h2 {
-      border-left: 4px solid #38bdf8;
-      padding-left: 12px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      color: #cbd5f5;
-      line-height: 1.7;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .card {
-      background: #111827;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #1f2937;
-      transition: all 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: #38bdf8;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    }
-
     .badge {
       display: inline-block;
-      margin: 6px;
-      padding: 8px 14px;
-      background: #111827;
-      border: 1px solid #1f2937;
+      margin: 5px;
+      padding: 8px 12px;
+      background: #020617;
       border-radius: 20px;
-      font-size: 0.85rem;
-    }
-
-    ul {
-      padding-left: 20px;
-      color: #cbd5f5;
-    }
-
-    li {
-      margin-bottom: 8px;
+      font-size: 0.9rem;
     }
 
     footer {
       text-align: center;
-      padding: 40px;
+      padding: 30px;
       color: #64748b;
-      border-top: 1px solid #1f2937;
-    }
-
-    /* Animations */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease;
-    }
-
-    .fade-in.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    i {
-      margin-right: 8px;
-      color: #38bdf8;
     }
   </style>
 </head>
 
 <body>
 
-<nav>
-  <div><strong>Nazneen</strong></div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#impact">Impact</a>
-    <a href="#case">Case Study</a>
-    <a href="#skills">Skills</a>
-  </div>
-</nav>
-
 <header>
   <h1>Nazneen Jamadar</h1>
-  <p class="subtitle">Customer Success Engineer | SaaS | CDN | Web Security</p>
+  <p>Customer Success Engineer | SaaS | CDN | Web Security</p>
 
-  <p class="hero-text">
-    Driving <span class="highlight">end-to-end customer lifecycle</span> — demos → PoC → onboarding → retention.<br><br>
-    Delivered <span class="highlight">10 PoCs with 6 conversions (60%)</span> and improved customer adoption & satisfaction.
+  <p>
+    Driving <span class="highlight">end-to-end customer lifecycle</span> — from demos and PoC to onboarding, adoption, and retention.<br><br>
+    Delivered <span class="highlight">10 PoCs with 6 conversions (60%)</span> and contributed to customer growth through retention, upsell, and satisfaction.
   </p>
-
-  <div class="cta">
-    <a href="#">Download Resume</a>
-  </div>
 </header>
 
 <div class="container">
 
-  <div class="section fade-in" id="about">
-    <h2>What I Do</h2>
+  <h2>What I Do</h2>
 
-    <p>I manage the full customer journey from <span class="highlight">product demos and PoCs to onboarding, support, and retention</span> in a startup environment.</p>
+  <p>
+    I work as a Customer Success Engineer in a startup, managing the complete customer lifecycle—from product demos and PoCs to onboarding, support, and long-term retention.
+  </p>
 
-    <p>I help customers implement <span class="highlight">DNS, CDN, and WAF</span>, ensuring smooth go-live and performance optimization.</p>
+  <p>
+    I start by delivering <span class="highlight">product demos</span> and supporting pre-sales validation, followed by leading <span class="highlight">Proof of Concepts (PoCs)</span> where I handle setup, testing, and guide customers through evaluation to production.
+  </p>
 
-    <p>I handle <span class="highlight">support tickets, troubleshooting, and QBRs</span> while focusing on customer satisfaction and retention.</p>
+  <p>
+    During onboarding, I work closely with customers to configure <span class="highlight">DNS, CDN, and WAF</span>, ensuring a smooth go-live and faster time-to-value.
+  </p>
 
-    <p>I also drive <span class="highlight">upsell and cross-sell opportunities</span> and contribute to revenue growth.</p>
+  <p>
+    Post go-live, I handle <span class="highlight">support tickets and L2 troubleshooting</span>, ensuring timely resolution and a seamless customer experience. I also stay engaged through <span class="highlight">QBRs</span>, sharing insights and helping customers optimize their setup.
+  </p>
 
-    <p>Additionally, I create <span class="highlight">KB articles, product videos, and training sessions</span> for customers and partners to improve adoption and reduce repetitive queries.</p>
+  <p>
+    I actively work on <span class="highlight">customer retention, satisfaction, and account growth</span> by identifying <span class="highlight">upsell and cross-sell opportunities</span>.
+  </p>
+
+  <p>
+    To improve adoption at scale, I create <span class="highlight">knowledge base articles, product videos, and conduct training sessions</span> for customers and partners, helping reduce repetitive queries.
+  </p>
+
+  <h2>Core Responsibilities</h2>
+
+  <div class="grid">
+    <div class="card"><h3>Product Demos</h3><p>Pre-sales demos & solution validation</p></div>
+    <div class="card"><h3>PoC Execution</h3><p>10 PoCs → 6 conversions (60%)</p></div>
+    <div class="card"><h3>Onboarding</h3><p>DNS, CDN, WAF setup</p></div>
+    <div class="card"><h3>Support</h3><p>Handling support tickets & L2 issues</p></div>
+    <div class="card"><h3>QBRs</h3><p>Customer insights & performance reviews</p></div>
+    <div class="card"><h3>Retention</h3><p>Customer success & growth</p></div>
   </div>
 
-  <div class="section fade-in" id="impact">
-    <h2>Customer Impact</h2>
+  <h2>Customer Impact</h2>
 
-    <div class="grid">
-      <div class="card"><h3><i data-lucide="rocket"></i>Adoption</h3><p>Faster onboarding & time-to-value</p></div>
-      <div class="card"><h3><i data-lucide="trending-up"></i>Growth</h3><p>Upsell & cross-sell opportunities</p></div>
-      <div class="card"><h3><i data-lucide="smile"></i>Satisfaction</h3><p>Improved customer experience</p></div>
-      <div class="card"><h3><i data-lucide="zap"></i>Efficiency</h3><p>Reduced support queries</p></div>
-    </div>
+  <div class="grid">
+    <div class="card"><h3>Adoption</h3><p>Improved product usage through onboarding & training</p></div>
+    <div class="card"><h3>Satisfaction</h3><p>Ensured timely issue resolution and better experience</p></div>
+    <div class="card"><h3>Growth</h3><p>Upsell & cross-sell opportunities</p></div>
+    <div class="card"><h3>Efficiency</h3><p>Reduced support load via KB & videos</p></div>
   </div>
 
-  <div class="section fade-in" id="case">
-    <h2>Case Study</h2>
+<h2>Case Study</h2>
 
-    <div class="card">
-      <h3>Improving Performance & Converting PoC</h3>
+<div class="card">
+  <h3>🚀 Improving Performance & Converting PoC to Customer</h3>
 
-      <p><strong>Situation:</strong> Customer evaluating CDN + WAF.</p>
+  <p><strong>Situation:</strong><br>
+  A customer was evaluating our CDN and WAF solution but was unsure about performance improvement and how the setup would impact their existing application.</p>
 
-      <p><strong>What I Did:</strong></p>
-      <ul>
-        <li>Delivered product demo</li>
-        <li>Configured DNS and CDN</li>
-        <li>Applied WAF rules</li>
-        <li>Optimized caching</li>
-        <li>Handled troubleshooting</li>
-      </ul>
+  <p><strong>What I Did:</strong></p>
+  <ul>
+    <li>Delivered a product demo and understood their current architecture</li>
+    <li>Handled end-to-end PoC setup including DNS changes and CDN configuration</li>
+    <li>Applied WAF rules and optimized caching for better performance</li>
+    <li>Worked closely with the customer during testing and resolved issues in real-time</li>
+    <li>Shared performance observations and guided them through go-live readiness</li>
+  </ul>
 
-      <p><strong>Outcome:</strong> Successfully converted to paying customer.</p>
-    </div>
+  <p><strong>Outcome:</strong><br>
+  The customer saw clear performance improvement during the PoC and successfully moved to production. This contributed to overall PoC conversion and long-term engagement.</p>
+</div>
+
+<h2>Skills & Expertise</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>Customer Lifecycle Management</h3>
+    <p>Handling end-to-end journey from demo → PoC → onboarding → support → retention.</p>
   </div>
 
-  <div class="section fade-in" id="skills">
-    <h2>Skills & Expertise</h2>
+  <div class="card">
+    <h3>Pre-Sales & PoC Execution</h3>
+    <p>Delivering demos, handling technical validation, and converting PoCs to production customers.</p>
+  </div>
 
-    <div style="text-align:center;">
-      <span class="badge">Customer Success</span>
-      <span class="badge">Pre-sales</span>
-      <span class="badge">PoC</span>
-      <span class="badge">Onboarding</span>
-      <span class="badge">Support</span>
-      <span class="badge">DNS</span>
-      <span class="badge">CDN</span>
-      <span class="badge">WAF</span>
-      <span class="badge">QBR</span>
-      <span class="badge">Retention</span>
-      <span class="badge">Upsell</span>
-    </div>
+  <div class="card">
+    <h3>Onboarding & Implementation</h3>
+    <p>Hands-on experience with DNS configuration, CDN setup, and WAF rule implementation.</p>
+  </div>
+
+  <div class="card">
+    <h3>Technical Troubleshooting</h3>
+    <p>L2 support for HTTP errors, DNS issues, and CDN/WAF configurations.</p>
+  </div>
+
+  <div class="card">
+    <h3>Customer Success & Retention</h3>
+    <p>Driving adoption, improving satisfaction, and identifying upsell/cross-sell opportunities.</p>
+  </div>
+
+  <div class="card">
+    <h3>Customer Enablement</h3>
+    <p>Creating KB articles, product videos, and training sessions to improve adoption and reduce support load.</p>
   </div>
 
 </div>
@@ -268,22 +206,6 @@ html
 <footer>
   © 2026 Nazneen Jamadar
 </footer>
-
-<script>
-  const sections = document.querySelectorAll('.fade-in');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  });
-
-  sections.forEach(section => observer.observe(section));
-
-  lucide.createIcons();
-</script>
 
 </body>
 </html>
